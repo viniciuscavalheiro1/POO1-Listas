@@ -11,7 +11,8 @@ public class Lista1 {
 	public static void main(String[] args) {
 		// questao1();
 		// questao2();
-		questao3();
+		//questao3();
+		questao4();
 	}
 
 	/**
@@ -47,6 +48,16 @@ public class Lista1 {
 		System.out.println("O antecessor de " + x + " é " + (x-1) + ".");
 	}
 
+	/**
+	 * 4. Faça um programa que receba dois números e calcule o resto da
+	 * divisão do primeiro pelo segundo.
+	 */
+	private static void questao4() {
+		System.out.print("Digite o valor de \'x\' diferente de 0: ");
+		double x = Double.valueOf(sc.nextLine());
+		System.out.print("Digite o valor de \'y\': ");
+		double y = Double.valueOf(sc.nextLine());
+		System.out.print("O resto da divisão x/y: "+ df.format(x%y));
 	}
 	}
 }
