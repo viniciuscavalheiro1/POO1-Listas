@@ -11,8 +11,9 @@ public class Lista1 {
 	public static void main(String[] args) {
 		// questao1();
 		// questao2();
-		//questao3();
-		questao4();
+		// questao3();
+		// questao4();
+		questao5();
 	}
 
 	/**
@@ -58,6 +59,19 @@ public class Lista1 {
 		System.out.print("Digite o valor de \'y\': ");
 		double y = Double.valueOf(sc.nextLine());
 		System.out.print("O resto da divisão x/y: "+ df.format(x%y));
+	}
+
+	/**
+	 * 5. Fazer um algoritmo que receba como entrada a quantidade de horas
+	 * trabalhadas por um professor e o valor de sua hora-aula. O algoritmo deve
+	 * retornar o valor do salário do professor.
+	 */
+	private static void questao5() {
+		System.out.print("Digite o valor de horas trabalhadas: ");
+		double horas = Double.valueOf(sc.nextLine());
+		System.out.print("Digite o valor da hora/aula: ");
+		double valor = Double.valueOf(sc.nextLine());
+		System.out.println("O salário do professor é "+ horas*valor);
 	}
 	}
 }
