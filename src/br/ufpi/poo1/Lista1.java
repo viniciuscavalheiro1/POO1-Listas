@@ -13,7 +13,8 @@ public class Lista1 {
 		// questao2();
 		// questao3();
 		// questao4();
-		questao5();
+		//questao5();
+		questao6();
 	}
 
 	/**
@@ -73,5 +74,22 @@ public class Lista1 {
 		double valor = Double.valueOf(sc.nextLine());
 		System.out.println("O salário do professor é "+ horas*valor);
 	}
+
+	/**
+	 * 6. Sabendo que um carro faz 12Km com um litro de gasolina e que serão
+	 * fornecidos a velocidade média e o tempo gasto em uma viagem, exibir:
+	 * distância percorrida e quantidade de gasolina necessária para a viagem.
+	 */
+	private static void questao6() {
+		System.out.print("Digite a velocidade média (em Km/h): ");
+		double vm = Double.valueOf(sc.nextLine());
+		System.out.print("Digite tempo gasto (em minutos): ");
+		double t = Double.valueOf(sc.nextLine());
+		double d = vm*t/60;
+		double g = d/12;
+		System.out.println("A distância percorrida foi "+ d +"Km e a gasolina "
+				+ "necessária foi "+ df.format(g)+"L." );
+	}
+
 	}
 }
