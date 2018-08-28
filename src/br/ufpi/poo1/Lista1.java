@@ -23,7 +23,8 @@ public class Lista1 {
 		// questao8(324.0, 2342.8);
 		// questao9(5, 9);
 		// questao10(8.4, 3.6);
-		questao11();
+		// questao11();
+		questao12();
 	}
 
 	/**
@@ -158,6 +159,22 @@ subtração, multiplicação.
 			nota = sc.nextDouble();
 		}while(nota<0 || nota>10);
 
+	}
+	
+	/**
+	 * 12. Faça um programa que leia um nome de usuário e a sua senha e não aceite 
+	 * a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando 
+	 * a pedir as informações.
+	 */
+	private static void questao12() {
+		String user;
+		String senha;
+		do{
+			System.out.print("digite o nome do usuario: ");
+			user = sc.next();
+			System.out.println("digite a senha do usuario:");
+			senha = sc.next();
+		}while(!user.equals(senha));
 	}
 	}
 }
