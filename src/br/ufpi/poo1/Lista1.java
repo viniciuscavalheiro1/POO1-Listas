@@ -1,6 +1,10 @@
 package br.ufpi.poo1;
 
+import java.text.DateFormat;
 import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Lista1 {
@@ -8,13 +12,14 @@ public class Lista1 {
 	static Scanner sc = new Scanner(System.in);
 	static DecimalFormat df = new DecimalFormat("#.##");
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		// questao1();
 		// questao2();
 		// questao3();
 		// questao4();
-		//questao5();
-		questao6();
+		// questao5();
+		// questao6();
+		questao7();
 	}
 
 	/**
@@ -89,6 +94,26 @@ public class Lista1 {
 		double g = d/12;
 		System.out.println("A distância percorrida foi "+ d +"Km e a gasolina "
 				+ "necessária foi "+ df.format(g)+"L." );
+	}
+
+	/**
+	 * 7. Dada uma data no formato ddmmaa, exibir os dia, mês e ano separadamente.
+	 * @throws ParseException 
+	 */
+	private static void questao7() throws ParseException {
+		System.out.print("Digite a data no formato (ddmmaa): ");
+		String sdata=sc.nextLine();
+		int data = Integer.valueOf(sdata);
+		int dia = data/10000;
+		data-=dia*10000;
+		int mes = data/100;
+		data-=mes*100;
+		int ano = data;
+		System.out.println(dia+"/"+mes+"/"+ano);
+		
+		DateFormat df = new SimpleDateFormat("ddMMyy");
+        Date date = df.parse(sdata);
+        System.out.println("Java Date = " + date.toString());
 	}
 
 	}
