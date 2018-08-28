@@ -20,7 +20,8 @@ public class Lista1 {
 		// questao5();
 		// questao6();
 		// questao7();
-		questao8(324.0, 2342.8);
+		// questao8(324.0, 2342.8);
+		questao9(5, 9);
 	}
 
 	/**
@@ -123,6 +124,16 @@ public class Lista1 {
 	 */
 	private static void questao8(double minimo, double salario) {
 		System.out.println("A pessoa ganha "+ Math.floor(salario/minimo));		
+	}
+	
+	/**
+	 * 9. Faça um programa em Java que leia dois valores inteiros e mostre a soma,
+subtração, multiplicação.
+	 */
+	private static void questao9(int a, int b) {
+		System.out.println("Soma: "+ (a+b));
+		System.out.println("Subtracao: "+ (a-b));
+		System.out.println("Multiplicacao: "+ (a*b));
 	}
 	
 	}
