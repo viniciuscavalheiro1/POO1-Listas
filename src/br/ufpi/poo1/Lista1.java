@@ -24,7 +24,9 @@ public class Lista1 {
 		// questao9(5, 9);
 		// questao10(8.4, 3.6);
 		// questao11();
-		questao12();
+		// questao12();
+		questao13();
+		
 	}
 
 	/**
@@ -176,5 +178,50 @@ subtração, multiplicação.
 			senha = sc.next();
 		}while(!user.equals(senha));
 	}
+	
+	/**
+	 * 
+	 */
+	public static void questao13() {
+		// a. Nome: maior que 3 caracteres;
+		String nome;
+		do {
+			System.out.print("digite o nome: ");
+			nome = sc.next();
+		} while (nome.length() <= 3);
+
+		// b. Idade: entre 0 e 150;
+		Integer idade;
+		do {
+			System.out.print("digite a idade: ");
+			idade = Integer.valueOf(sc.next());
+		} while (idade < 0 || idade > 150);
+
+		// c. Salário: maior que zero;
+		Double salario;
+		do{
+			System.out.print("digite o salário: ");
+			salario = Double.valueOf(sc.next());			
+		}while(salario<=0);
+		
+		// d. Sexo: 'f' ou 'm';
+		String sexo;
+		do{
+			System.out.print("digite o sexo (m/f): ");
+			sexo = sc.next();
+		}while(!sexo.toLowerCase().equals("f") || !sexo.toLowerCase().equals("m"));
+		
+		// e. Estado Civil: 's', 'c', 'v', 'd';
+		String estado;
+		do{
+			System.out.print("digite o sexo (s/c/v/d): ");
+			estado = sc.next();
+		}while(!estado.toLowerCase().equals("s") || 
+				!estado.toLowerCase().equals("c") ||
+				!estado.toLowerCase().equals("v") || 
+				!estado.toLowerCase().equals("d"));
+		
+	}
+
 	}
 }
