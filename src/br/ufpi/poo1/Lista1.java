@@ -21,7 +21,8 @@ public class Lista1 {
 		// questao6();
 		// questao7();
 		// questao8(324.0, 2342.8);
-		questao9(5, 9);
+		// questao9(5, 9);
+		questao10(8.4, 3.6);
 	}
 
 	/**
@@ -136,5 +137,12 @@ subtração, multiplicação.
 		System.out.println("Multiplicacao: "+ (a*b));
 	}
 	
+	/**
+	 * 10. Escreva um programa que leia duas notas e receba do usuário os valores 
+	 * dessas notas, calcule a média e mostre o resultado da média na tela.
+	 */
+	private static void questao10(double n1, double n2) {
+		System.out.println("A média aritmética é: "+ (n1+n2)/2);
+	}
 	}
 }
