@@ -22,7 +22,8 @@ public class Lista1 {
 		// questao7();
 		// questao8(324.0, 2342.8);
 		// questao9(5, 9);
-		questao10(8.4, 3.6);
+		// questao10(8.4, 3.6);
+		questao11();
 	}
 
 	/**
@@ -143,6 +144,20 @@ subtração, multiplicação.
 	 */
 	private static void questao10(double n1, double n2) {
 		System.out.println("A média aritmética é: "+ (n1+n2)/2);
+	}
+	
+	/**
+	 * 11. Faça um programa que peça uma nota, entre zero e dez. Mostre uma 
+	 * mensagem caso o valor seja inválido e continue pedindo até que o usuário 
+	 * informe um valor válido.
+	 */
+	private static void questao11() {
+		double nota;
+		do{
+			System.out.print("digite uma nota entre 0 e 10:");
+			nota = sc.nextDouble();
+		}while(nota<0 || nota>10);
+
 	}
 	}
 }
