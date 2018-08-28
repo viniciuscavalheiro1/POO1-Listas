@@ -19,7 +19,8 @@ public class Lista1 {
 		// questao4();
 		// questao5();
 		// questao6();
-		questao7();
+		// questao7();
+		questao8(324.0, 2342.8);
 	}
 
 	/**
@@ -116,5 +117,13 @@ public class Lista1 {
         System.out.println("Java Date = " + date.toString());
 	}
 
+	/**
+	 * 8. Dados os valores do salário mínimo e o salário de uma pessoa, exibir 
+	 * quantos salários mínimos essa pessoa ganha.
+	 */
+	private static void questao8(double minimo, double salario) {
+		System.out.println("A pessoa ganha "+ Math.floor(salario/minimo));		
+	}
+	
 	}
 }
