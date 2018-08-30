@@ -25,8 +25,8 @@ public class Lista1 {
 		// questao10(8.4, 3.6);
 		// questao11();
 		// questao12();
-		questao13();
-		
+		// questao13();
+		questao14();
 	}
 
 	/**
@@ -182,7 +182,7 @@ subtração, multiplicação.
 	/**
 	 * 
 	 */
-	public static void questao13() {
+	private static void questao13() {
 		// a. Nome: maior que 3 caracteres;
 		String nome;
 		do {
@@ -223,5 +223,23 @@ subtração, multiplicação.
 		
 	}
 
+	/**
+	 * 14. Supondo que a população de um país A seja da ordem de 80000 habitantes 
+	 * com uma taxa anual de crescimento de 3% e que a população de B seja 200000 
+	 * habitantes com uma taxa de crescimento de 1.5%. Faça um programa que calcule
+	 * e escreva o número de anos necessários para que a população do país A 
+	 * ultrapasse ou iguale a população do país B, mantidas as taxas de 
+	 * crescimento.
+	 */
+	private static void questao14(){
+		int populacaoA = 80000, populacaoB = 200000, numeroDeAnos=0;
+		double taxaA = 0.03, taxaB = 0.015;
+		do{
+			populacaoA += populacaoA*taxaA;
+			populacaoB += populacaoB*taxaB;
+			numeroDeAnos++;
+		}while(populacaoB > populacaoA);
+		System.out.println(String.format("Levaram %d anos para a população B ficar maior que a população A!", numeroDeAnos));
+	}
 	}
 }
