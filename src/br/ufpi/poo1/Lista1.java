@@ -30,7 +30,8 @@ public class Lista1 {
 		// questao15();
 		// questao16();
 		// questao17();
-		questao18();
+		// questao18();
+		questao19();
 	}
 
 	/**
@@ -341,6 +342,17 @@ subtração, multiplicação.
 		double soma = num1+num2+num3+num4;
 		System.out.println(String.format("A soma dos números é '%d'", soma));
 		System.out.println(String.format("A média dos números é '%d'", soma/4));
+	}
+	
+	/**
+	 * 19. Faça um programa que imprima na tela apenas os números ímpares entre 1 e
+	 *  50.
+	 */
+	private static void questao19(){
+		for(int i=2;i<50;i++){
+			if(i%2==1)
+				System.out.println(i);
+		}
 	}
 	}
 }
