@@ -26,7 +26,8 @@ public class Lista1 {
 		// questao11();
 		// questao12();
 		// questao13();
-		questao14();
+		// questao14();
+		questao15();
 	}
 
 	/**
@@ -241,5 +242,47 @@ subtração, multiplicação.
 		}while(populacaoB > populacaoA);
 		System.out.println(String.format("Levaram %d anos para a população B ficar maior que a população A!", numeroDeAnos));
 	}
+	
+	/**
+	 * 15. Altere o programa anterior permitindo ao usuário informar as populações 
+	 * e as taxas de crescimento iniciais. Valide a entrada e permita repetir a 
+	 * operação.
+	 */
+	private static void questao15(){
+		int numeroDeAnos=0;
+		String entrada;
+
+		while(true){
+			System.out.println("Novo round!\n========");
+			System.out.print("Digite a população A ou 'fim' para sair: ");
+			entrada = sc.next();
+			if(entrada.toLowerCase().equals("fim")) break;
+			int populacaoA = Integer.valueOf(entrada);
+			
+			System.out.print("Digite a população B ou 'fim' para sair: ");
+			entrada = sc.next();
+			if(entrada.toLowerCase().equals("fim")) break;
+			int populacaoB = Integer.valueOf(entrada);
+			
+			System.out.print("Digite a taxa A ou 'fim' para sair: ");
+			entrada = sc.next();
+			if(entrada.toLowerCase().equals("fim")) break;
+			double taxaA = Double.valueOf(entrada);
+			
+			System.out.print("Digite a taxa B ou 'fim' para sair: ");
+			entrada = sc.next();
+			if(entrada.toLowerCase().equals("fim")) break;
+			double taxaB = Double.valueOf(entrada);
+			
+			do{
+				populacaoA += populacaoA*taxaA;
+				populacaoB += populacaoB*taxaB;
+				numeroDeAnos++;
+			}while(populacaoB > populacaoA);
+			
+			System.out.println(String.format("Levaram %d anos para a população B ficar maior que a população A!", numeroDeAnos));
+		}
+	}
+	
 	}
 }
