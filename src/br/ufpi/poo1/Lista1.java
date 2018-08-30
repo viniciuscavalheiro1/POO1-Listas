@@ -28,7 +28,9 @@ public class Lista1 {
 		// questao13();
 		// questao14();
 		// questao15();
-		questao16();
+		// questao16();
+		// questao17();
+		questao18();
 	}
 
 	/**
@@ -297,6 +299,48 @@ subtração, multiplicação.
 		for(int i=1; i<21; i++){
 			System.out.print(i+",");
 		}
+	}
+	
+	/**
+	 * 17. Faça um programa que leia 5 números e informe o maior número.
+	 */
+	public static void questao17() {
+		System.out.println("Digite cinco numeros: ");
+
+		int[] digitos = new int[5];
+
+		int maior = Integer.MIN_VALUE;
+		for (int i = 0; i < 5; i++) {
+			digitos[i] = Integer.valueOf(sc.nextLine());
+			if (digitos[i] > maior)
+				maior = digitos[i];
+		}
+		System.out.println("o maior número é: " + maior);
+	}
+	/**
+	 * 18. Faça um programa que leia 5 números e informe a soma e a média dos 
+	 * números.
+	 */
+	private static void questao18(){
+		System.out.print("Digite um número: ");
+		String entrada = sc.next();
+		double num1 = Double.valueOf(entrada);
+		
+		System.out.print("Digite um número: ");
+		entrada = sc.next();
+		double num2 = Double.valueOf(entrada);
+		
+		System.out.print("Digite um número: ");
+		entrada = sc.next();
+		double num3 = Double.valueOf(entrada);
+		
+		System.out.print("Digite um número: ");
+		entrada = sc.next();
+		double num4 = Double.valueOf(entrada);
+		
+		double soma = num1+num2+num3+num4;
+		System.out.println(String.format("A soma dos números é '%d'", soma));
+		System.out.println(String.format("A média dos números é '%d'", soma/4));
 	}
 	}
 }
