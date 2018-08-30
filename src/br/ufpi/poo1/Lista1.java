@@ -31,7 +31,8 @@ public class Lista1 {
 		// questao16();
 		// questao17();
 		// questao18();
-		questao19();
+		// questao19();
+		questao20();
 	}
 
 	/**
@@ -354,5 +355,18 @@ subtração, multiplicação.
 				System.out.println(i);
 		}
 	}
+	
+	/**
+	 * 20. Faça um programa que receba dois números inteiros e gere os números 
+	 * inteiros 	que estão no intervalo compreendido por eles.
+	 */
+	private static void questao20(){
+		System.out.print("digite um número inteiro: ");
+		int num1 = Integer.valueOf(sc.next());
+		System.out.print("digite um número inteiro: ");
+		int num2 = Integer.valueOf(sc.next());
+		for(int i=num1; i<=num2; i++){
+			System.out.print(i+",");
+		}
 	}
 }
