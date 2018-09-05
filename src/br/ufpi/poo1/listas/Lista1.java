@@ -1,4 +1,4 @@
-package br.ufpi.poo1;
+package br.ufpi.poo1.listas;
 
 import java.text.DateFormat;
 import java.text.DecimalFormat;

@@ -1,4 +1,4 @@
-package br.ufpi.poo1;
+package br.ufpi.poo1.listas;
 
 import br.ufpi.poo1.aux.Lampada;
 import br.ufpi.poo1.aux.Quadrado;
