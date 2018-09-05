@@ -17,7 +17,7 @@ public class Lista3 {
 		
 		System.out.println("Numero: "+p.getNumero());
 		System.out.println("Nome: "+p.getNome());
-		System.out.println("Saldo: +"+p.getSaldo());
+		System.out.println("Saldo: "+p.getSaldo());
 		
 		System.out.println(p.getIMC(75.5, 163));
 		

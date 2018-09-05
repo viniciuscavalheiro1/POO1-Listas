@@ -47,7 +47,7 @@ public class Pessoa {
 	public void imprime() {
 		System.out.println("Numero: "+ getNumero());
 		System.out.println("Nome: "+ getNome());
-		System.out.println("Saldo: +"+ getSaldo());
+		System.out.println("Saldo: "+ getSaldo());
 	}
 
 }
