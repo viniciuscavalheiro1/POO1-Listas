@@ -2,27 +2,47 @@ package br.ufpi.poo1.aux;
 
 public class Pessoa {
 
-	private int numero;
 	private String nome;
-	private double saldo;
+	private int idade;
+	private double altura;
+	private double peso;
 
-	public Pessoa(int id, String cliente, double saldoInicial) {
-		setNumero(id);
-		setNome(cliente);
-		setSaldo(saldoInicial);
+	public Pessoa(String umNome, int umaIdade, double umaAltura, double umPeso) {
+		setNome(umNome);
+		setIdade(umaIdade);
+		setAltura(umaAltura);
+		setPeso(umPeso);
 	}
-
+	
 	public Pessoa() {
-		this(0, null, 0.0);
+		this("", 0, 0.0, 0.0);
 	}
 
-	public void setSaldo(double saldoInicial) {
-		this.saldo = saldoInicial;
+	public int getIdade() {
+		return idade;
 	}
 
-	public double getSaldo() {
-		return this.saldo;
+	public void setIdade(int idade) {
+		this.idade = idade;
 	}
+
+	public double getAltura() {
+		return altura;
+	}
+
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
+
+	public double getPeso() {
+		return peso;
+	}
+
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
+
+
 
 	public void setNome(String cliente) {
 		this.nome = cliente;
@@ -32,22 +52,16 @@ public class Pessoa {
 		return this.nome;
 	}
 
-	public void setNumero(int id) {
-		this.numero = id;
-	}
-	
-	public int getNumero() {
-		return this.numero;
-	}
 
-	public double getIMC(double massa, double altura) {
-		return massa/(altura * altura);
+	public double getIMC() {
+		return peso/(altura * altura);
 	}
 
 	public void imprime() {
-		System.out.println("Numero: "+ getNumero());
 		System.out.println("Nome: "+ getNome());
-		System.out.println("Saldo: "+ getSaldo());
+		System.out.println("Idade: "+ getIdade());
+		System.out.println("Altura: " +getAltura()+"cm");
+		System.out.println("Massa Corporal: "+getPeso()+"Kg");
 	}
 
 }

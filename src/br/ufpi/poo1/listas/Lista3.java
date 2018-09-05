@@ -12,14 +12,16 @@ public class Lista3 {
 		Pessoa p  = new Pessoa();
 		
 		p.setNome("Alcemir");
-		p.setNumero(1);
-		p.setSaldo(100.0);
+		p.setIdade(10);
+		p.setAltura(100.0);
+		p.setPeso(76.5);
 		
-		System.out.println("Numero: "+p.getNumero());
-		System.out.println("Nome: "+p.getNome());
-		System.out.println("Saldo: "+p.getSaldo());
-		
-		System.out.println(p.getIMC(75.5, 163));
+		System.out.println("Nome: "+ p.getNome());
+		System.out.println("Idade: "+ p.getIdade());
+		System.out.println("Altura: " + p.getAltura()+"cm");
+		System.out.println("Massa Corporal: "+ p.getPeso()+"Kg");
+
+		System.out.println(p.getIMC());
 		
 		p.imprime();
 	}
