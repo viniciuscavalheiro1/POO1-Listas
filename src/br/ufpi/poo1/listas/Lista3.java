@@ -21,7 +21,7 @@ public class Lista3 {
 		System.out.println("Altura: " + p.getAltura()+"cm");
 		System.out.println("Massa Corporal: "+ p.getPeso()+"Kg");
 
-		System.out.println(p.getIMC());
+		System.out.println("IMC: "+ p.getIMC());
 		
 		p.imprime();
 	}
