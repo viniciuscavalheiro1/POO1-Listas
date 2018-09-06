@@ -54,7 +54,7 @@ public class Produto {
 	
 	public String getMargemLucroPorcentagem(){
 		DecimalFormat df = new DecimalFormat("#.##");
-		return df.format( calcularMargemLucro()/this.precoCusto )+"%";
+		return df.format( 100 * calcularMargemLucro()/this.precoCusto )+"%";
 	}
 	
 
