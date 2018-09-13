@@ -32,7 +32,33 @@ public class Lista1 {
 		// questao17();
 		// questao18();
 		// questao19();
-		questao20();
+		// questao20();
+		// questao21();
+		// questao22();
+		// questao23();
+		// questao24();
+		// questao25();
+		// questao26();
+		// questao27();
+		// questao28();
+		// questao29();
+		// questao30();
+		// questao31();
+		// questao32();
+		// questao33();
+		// questao34();
+		// questao35();
+		// questao36();
+		// questao37();
+		// questao38();
+		// questao39();
+		// questao40();
+		// questao41();
+		// questao42();
+		// questao43();
+		//questao44();
+		//questao45();
+		questao46();
 	}
 
 	/**
@@ -369,4 +395,639 @@ subtração, multiplicação.
 			System.out.print(i+",");
 		}
 	}
+	
+	/**
+	 * 21. Altere o programa anterior para mostrar no final a soma dos números.
+	 */
+	private static void questao21(){
+		System.out.print("digite um número inteiro: ");
+		int num1 = Integer.valueOf(sc.next());
+		System.out.print("digite um número inteiro: ");
+		int num2 = Integer.valueOf(sc.next());
+		int soma = 0;
+		for(int i=num1; i<=num2; i++){
+			System.out.print(i+",");
+			soma += i;
+		}
+		System.out.println("\nSoma do intervalo = " + soma);
+	}
+	
+	/**
+	 * 22. Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer
+	 *	número inteiro entre 1 a 10. O usuário deve informar de qual numero ele deseja
+	 *	ver a tabuada. A saída deve ser conforme o exemplo abaixo: 
+	 */
+	private static void questao22() {
+		System.out.print("digite um número inteiro: ");
+		int num = Integer.valueOf(sc.next());
+		for(int c = 1; c <= 10; c++) {
+			System.out.printf("%d x %d = %d\n", num, c, (num * c));
+		}
+	}
+	
+	/**
+	 * 23. Faça um programa que peça dois números, base e expoente, calcule e mostre o
+	 *	primeiro número elevado ao segundo número. Não utilize a função de potência da
+	 *  linguagem.
+	 */
+	static void questao23(){
+        
+        System.out.println("Tabela de preços");
+        double numero = 0;
+        for(int i = 1 ; i <= 50; i++){
+            numero = numero + 1.99;
+            System.out.printf("Intem %d - %.2f \n", i, numero);                
+        }
+        
+    }
+
+	/*
+	 * 24. Faça um programa que peça 10 números inteiros, calcule e mostre a quantidade
+	 * de números pares e a quantidade de números impares.
+	 */
+	static void questao24(){
+
+		System.out.print("Informe o preço do pão: ");
+		float precoPao = sc.nextFloat();
+		System.out.printf("Preço do pão: R$ %.2f\n", precoPao);
+		System.out.println("Panificadora Pão de Ontem - Tabela de preços");
+		for(int cont = 1; cont <= 50; cont++){
+			System.out.printf("%d - R$ %.2f\n", cont, cont*precoPao);
+		}
+
+	}
+	
+	/*
+	 * 25. A série de Fibonacci é formada pela seqüência 1,1,2,3,5,8,13,21,34,55,... Faça um
+	 *programa capaz de gerar a série até o n−ésimo termo.
+	 */
+	
+	static void questao25(){
+        System.out.println("Lojas Tabajara");
+        int produtos;
+        double valor ;
+        double result = 0 ;
+        double total ;
+        int repetir ;
+        
+        do{
+        for(int i = 1; i <= 1000; i++){
+            System.out.printf("Produto %d: \n", i);
+            valor = sc.nextDouble();
+            if(valor == 0){
+                break;
+            }
+            result = valor + result;
+            
+        }
+            System.out.printf("total %.2f \n", result);
+            System.out.println("dinheiro: ");
+            total = sc.nextDouble();
+            total = total-result;
+            System.out.printf("troco: %.2f \n", total);
+            System.out.println("deseja repetir? ");
+            System.out.println("sim[1]//nao[2]");
+            repetir = sc.nextInt();
+            
+               
+        }while(repetir != 2);
+    }
+
+	/*
+	 * 26. A série de Fibonacci é formada pela seqüência 0,1,1,2,3,5,8,13,21,34,55,... Faça
+	 * um programa que gere a série até que o valor seja maior que 500.
+	 */
+	static void questao26(){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Informe um numero para o fatorial: ");
+		int fat = sc.nextInt();
+		System.out.printf("O Fatorial de: %d o %d! = ", fat, fat);
+		for(int cont = fat-1; cont >= 1; cont--){
+			fat *= cont;
+			System.out.printf("%d", cont);
+			if(cont > 1){
+				System.out.printf(".");
+			}
+		}
+		System.out.printf(" = %d\n", fat);
+	}
+	
+	/*
+	 * 27. Faça um programa que calcule o fatorial de um número inteiro fornecido pelo
+	 * usuário. Ex.: 5!=5.4.3.2.1=120
+	 */
+
+	static void questao27(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Informe a quantidade de temperaturas colhidas");
+		int quanTemp = sc.nextInt();
+		float[] temperaturas = new float[quanTemp];
+		float menor = 100;
+		float maior = 0;
+		float media = 0;
+		for(int cont = 0; cont < quanTemp; cont++){
+			System.out.printf("Informe a %d temperatura: ", cont+1);
+			temperaturas[cont] = sc.nextFloat();
+			media += temperaturas[cont];
+			if(temperaturas[cont] < menor){
+				menor = temperaturas[cont];
+			}
+			if(temperaturas[cont] > maior){
+				maior = temperaturas[cont];
+			}
+		}
+
+		System.out.printf("A media foi %.2f, maior temperatura %.2f e menor temperatura %.2f\n", (media/quanTemp), maior, menor);
+	}
+
+	/*
+	 * 28. Faça um programa que peça um número inteiro e determine se ele é ou não um
+	 * número primo. Um número primo é aquele que é divisível somente por ele
+     * mesmo e por 1. 
+	 */
+	static void questao28(){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Informe um numero: ");
+		int num = sc.nextInt();
+		int cont = 0;
+		for(int c = 1; c <= num; c++){
+			if(num % c == 0){
+				cont++;
+			}
+		}
+		if(cont == 2){
+			System.out.printf("O numero %d eh primo.\n", num);
+		}else{
+			System.out.printf("O numero %d não eh primo\n.", num);
+		}
+
+	}
+	
+	/*
+	 * 29. Faça um programa que calcule o mostre a média aritmética de N notas.
+	 */
+	static void questao29(){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Informe um numero: ");
+		int num = sc.nextInt();
+		int cont = 0;
+		for(int c = 1; c <= num; c++){
+			for(int k = 1; k <= num; k++){
+				if(c % k == 0){
+					cont++;
+				}
+			}
+			if(cont == 2){
+				System.out.printf("O numero %d eh primo. \n", c);
+			}
+			cont = 0;
+		}
+	}
+	
+	/*
+	 * 30. Faça um programa que peça para n pessoas a sua idade, ao final o programa
+	 * devera verificar se a média de idade da turma varia entre 0 e 25,26 e 60 e maior
+	 * que 60; e então, dizer se a turma é jovem, adulta ou idosa, conforme a média
+	 * calculada.
+	 */
+	static void questao30(){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Montar a tadoada de: ");
+		int num = sc.nextInt();
+		System.out.print("Começar por: ");
+		int inicio = sc.nextInt();
+		System.out.print("Terminar em: ");
+		int fim = sc.nextInt();
+		if(fim < inicio){
+			int aux = fim;
+			fim = inicio;
+			inicio = aux;
+		}
+		for(int cont = inicio; cont <= fim; cont++){
+			System.out.printf("%d x %d = %d\n", num, cont, (num * cont));
+		}
+	}
+	
+	/*
+	 * 31. Faça um programa que calcule o número médio de alunos por turma. Para isto,
+  	 * peça a quantidade de turmas e a quantidade de alunos para cada turma. As
+     * turmas não podem ter mais de 40 alunos.
+	 */
+	static void questao31(){
+		Scanner sc = new Scanner(System.in);
+		double salario = sc.nextDouble();
+		double almento = sc.nextDouble();
+		salario += (salario * almento)/100;
+		System.out.println(salario);
+		for(int cont = 1997; cont <= 2018; cont++){
+			salario += (salario * almento)/100;
+			almento = almento * 2;
+		}
+		System.out.printf("O salario atual do mesmo eh: %.2f\n", salario);
+	}
+	/*
+	 * 32. Faça um programa que calcule o valor total investido por um colecionador em sua
+	 * coleção de CDs e o valor médio gasto em cada um deles. O usuário deverá
+	 * informar a quantidade de CDs e o valor para em cada um.
+	 */
+	static void questao32(){
+        Scanner teclado32 = new Scanner(System.in);
+        int escolha , i = 0;
+        double quantidade = 0;
+        int comida100 = 100,comida101 = 101, comida102 = 102, comida103 = 103, comida104 = 104, comida105 = 105;
+        System.out.println("Cardapio da lanchonete: ");
+        System.out.println("[100]Cachorro quente - R$1,20");
+        System.out.println("[101]Bauru simples - R$1,30");
+        System.out.println("[102]Bauru com ovo - R$1,50");
+        System.out.println("[103]Hamburguer - R$1,20");
+        System.out.println("[104]Cheeseburguer - R$1,30");
+        System.out.println("[105]Refrigerante - R$1,00");
+        do{
+    
+         escolha = teclado32.nextInt();
+        if(escolha == 100){
+                System.out.println("escolha a quantidade");
+                i = teclado32.nextInt();
+                quantidade = quantidade + (i * 1.20);
+                
+        }else if(escolha == 101){
+            System.out.println("escolha a quantidade");
+                i = teclado32.nextInt();
+                quantidade = quantidade + (i * 1.30);
+            
+        }else if(escolha == 102){
+            System.out.println("escolha a quantidade");
+                i = teclado32.nextInt();
+                quantidade = quantidade + (i * 1.50);
+        
+        }else if(escolha == 103){
+            System.out.println("escolha a quantidade");
+            i = teclado32.nextInt();
+            quantidade = quantidade + (i * 1.20);
+            
+        }else if(escolha == 104){
+            System.out.println("escolha a quantidade");
+            i = teclado32.nextInt();
+            quantidade = quantidade + (i * 1.30);
+            
+        }else if(escolha == 105){
+            System.out.println("escolha a quantidade");
+            i = teclado32.nextInt();
+            quantidade = quantidade + (i * 1.00);
+            
+            
+        }
+            System.out.println("escolha novamente ou digite 0 para sair");
+            
+        }while(escolha != 0);
+       
+        System.out.printf("valor a paga %.2f\n",quantidade);
+    }
+	
+	/*
+	 * 33. O Sr. Manoel Joaquim possui uma grande loja de artigos de R$ 1,99, com cerca de
+	 * 10 caixas. Para agilizar o cálculo de quanto cada cliente deve pagar ele
+	 * desenvolveu uma tabela que contém o número de itens que o cliente comprou e
+	 * ao lado o valor da conta. Desta forma a atendente do caixa precisa apenas contar
+	 * quantos itens o cliente está levando e olhar na tabela de preços. Você foi
+	 * contratado para desenvolver o programa que monta esta tabela de preços, que
+	 * conterá os preços de 1 até 50 produtos, conforme o exemplo abaixo:
+	 */
+	static void questao33(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Infome o n termos: ");
+        int n = sc.nextInt();
+        double soma = 0;
+        float m = 1;
+        for(float i = 1; i <= n; i++){
+            System.out.printf("%.0f/%.0f ", i, m);
+            soma += i/m;
+            if(i<n){
+                System.out.printf("+ ");
+            }
+            m+=2;
+        }
+        System.out.printf("\nSoma: %f\n", soma);
+    }
+	
+	/*
+	 * 34. O Sr. Manoel Joaquim acaba de adquirir uma panificadora e pretende implantar a
+	 * metodologia da tabelinha, que já é um sucesso na sua loja de 1,99. Você foi
+	 * contratado para desenvolver o programa que monta a tabela de preços de pães,
+	 * de 1 até 50 pães, a partir do preço do pão informado pelo usuário, conforme o
+	 * exemplo abaixo:
+	 */
+    static void questao34(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Infome N termos: ");
+        int n = sc.nextInt();
+        double soma = 0;
+        float m = 1;
+        for(float i = 1; i <= n; i++){
+            System.out.printf("%.0f/%.0f ", i, m);
+            soma += i/m;
+            m+=1;
+        }
+        System.out.printf("\nValor de H: %f\n", soma);
+    }
+    
+    /*
+     * 35. O Sr. Manoel Joaquim expandiu seus negócios para além dos negócios de 1,99 e
+     * 	Lojas Tabajara
+     * 	Produto 1: R$ 2.20
+     * 	Produto 2: R$ 5.80
+     * 	Produto 3: R$ 0
+     * 	Total: R$ 9.00
+     * 	Dinheiro: R$ 20.00
+     * 	Troco: R$ 11.00
+     * ...agora possui uma loja de conveniências. Faça um programa que implemente uma
+     * caixa registradora rudimentar. O programa deverá receber um número
+     * desconhecido de valores referentes aos preços das mercadorias. Um valor zero
+     * deve ser informado pelo operador para indicar o final da compra. O programa
+     * deve então mostrar o total da compra e perguntar o valor em dinheiro que o
+     * cliente forneceu, para então calcular e mostrar o valor do troco. Após esta
+     * operação, o programa deverá voltar ao ponto inicial, para registrar a próxima
+     * compra. A saída deve ser conforme o exemplo abaixo: 
+     */
+    static void questao35(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Infome o n termos: ");
+        int n = sc.nextInt();
+        double soma = 0;
+        float m = 1;
+        for(float i = 1; i <= n; i++){
+            System.out.printf("%.0f/%.0f ", i, m);
+            soma += i/m;
+            if(i<n){
+                System.out.printf("+ ");
+            }
+            m+=2;
+        }
+        System.out.printf("\nSoma: %f\n", soma);
+    }
+    
+    /*
+     * 36. Faça um programa que calcule o fatorial de um número inteiro fornecido pelo
+     * usuário. Ex.: 5!=5.4.3.2.1=120. A saída deve ser conforme o exemplo abaixo: o
+     * Fatorial de: 5 o 5! = 5 . 4 . 3 . 2 . 1 = 120
+     */
+    static void questao36(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Infome o n termos: ");
+        int n = sc.nextInt();
+        double soma = 0;
+        float m = 1;
+        for(float i = 1; i <= n; i++){
+            soma += i/m;
+  	            m++;
+        }
+        System.out.printf("\nValor de H: %f\n", soma);
+    }
+    
+    /*
+     * 37. O Departamento Estadual de Meteorologia lhe contratou para desenvolver um
+     * programa que leia as um conjunto indeterminado de temperaturas, e informe ao
+     * final a menor e a maior temperaturas informadas, bem como a média das
+     * temperaturas.
+     */
+    private static void questao37() {
+    	System.out.println("quantidade de temperaturas: ");
+    	int c = sc.nextInt();
+    	double[] temp = new double[c];
+    	double maior = 0;
+    	double media = 0;
+    	double menor = 1000;
+    	for(int cont = 0; cont < c; cont++) {
+    		System.out.printf("Informe a %d temperatura: \n", cont+1);
+    		temp[cont] = sc.nextDouble();
+    		media += temp[cont];
+    		if (temp[cont] > maior) {
+    			maior = temp[cont];
+    		}
+    		if (temp[cont] < menor) {
+    			menor = temp[cont];
+    		}
+    	}
+    	System.out.println("Maior temperatura: " + maior);
+    	System.out.println("Menor temperatura: " + menor);
+    	System.out.println("Media das temperaturas: " + (media/c));
+    }
+    
+    /*
+     * 38. Os números primos possuem várias aplicações dentro da Computação, por
+	 * exemplo na Criptografia. Um número primo é aquele que é divisível apenas por
+	 * um e por ele mesmo. Faça um programa qu
+     */
+    private static void questao38() {
+    	System.out.println("Informe um numero:");
+    	int num = sc.nextInt();
+    	int cont_aux = 0;
+    	for(int c = 1; c <= num; c++) {
+    		if (num % c == 0) {
+    			cont_aux++;
+    		}
+    	}
+    	if (cont_aux == 2) {
+    		System.out.println(num + " é primo!");
+    	}else {
+    		System.out.println("Não é primo");
+    	}
+    }
+    
+    /*
+     * 39. Encontrar números primos é uma tarefa difícil. Faça um programa que gera uma
+     * lista dos números primos existentes entre 1 e um número inteiro informado pelo
+     * usuário.
+     */
+    private static void questao39() {
+    	System.out.println("Informe um numero:");
+    	int num = sc.nextInt();
+    	for(int c = 1; c <= num; c++) {
+    		int aux = 0;
+    		for(int k = 1; k <= c; k++) {
+    			if (c % k == 0) {
+    				aux += 1;
+    			}
+    		}
+    		if (aux == 2) {
+    			System.out.println(c + " é primo");
+    		}
+    			
+    	}
+    }
+    
+    /*
+     * 40. Desenvolva um programa que faça a tabuada de um número qualquer inteiro que
+     * será digitado pelo usuário, mas a tabuada não deve necessariamente iniciar em 1
+     * Montar a tabuada de: 5
+     * Começar por: 4
+     * Terminar em: 7
+     * Vou montar a tabuada de 5 começando em 4 e terminando em 7:
+     * 5 X 4 = 20
+     * 5 X 5 = 25
+     * 5 X 6 = 30
+     * 5 X 7 = 35
+     * Obs: Você deve verificar se o usuário não digitou o final menor que o inicial.
+     * e terminar em 10, o valor inicial e final devem ser informados também pelo
+     * usuário, conforme exemplo abaixo:
+     */
+    private static void questao40() {
+    	System.out.println("Começar por:");
+    	int inicio = sc.nextInt();
+    	System.out.println("Terminar em:");
+    	int fim = sc.nextInt();
+    	for(; inicio <= fim; inicio++) {
+    		System.out.println(fim + " x " + inicio + " = " + (fim*inicio));
+    	}
+    }
+    
+    /*
+     * 41. Um funcionário de uma empresa recebe aumento salarial anualmente: Sabe-se
+     * que:
+     * 
+     * a. Esse funcionário foi contratado em 1995, com salário inicial de R$
+     * 1.000,00; a. Em 1996 recebeu aumento de 1,5% sobre seu salário inicial;
+     * 
+     * b. A partir de 1997 (inclusive), os aumentos salariais sempre
+     * correspondem ao dobro do percentual do ano anterior.
+     * Faça um programa que determine o salário atual desse funcionário.
+     * Após concluir isto, altere o programa permitindo que o usuário digite o
+     * salário inicial do funcionário.
+     */
+    private static void questao41() {
+    	double aumento = 1.5;
+    	System.out.println("Informe o salario inicial: ");
+    	double salario = sc.nextDouble();
+    	for (int c = 1997; c <= 2018; c+=1000) {
+    		aumento *= 2;
+    		salario = salario + (salario * 2);
+    	}
+    	System.out.println("Salario com rasjuste: " + salario);
+    }
+    
+    /*42. O cardápio de uma lanchonete é o seguinte:
+     * 
+     * Especificação
+     * Cachorro Quente
+     * Bauru Simples
+     * Bauru com ovo
+     * Hambúrguer
+     * Cheeseburguer
+     * Refrigerante
+     * Código
+     * 100
+     * 101
+     * 102
+     * 103
+     * 104
+     * 105
+     * Preço
+     * R$ 1,20
+     * R$ 1,30
+     * R$ 1,50
+     * R$ 1,20
+     * R$ 1,30
+     * R$ 1,00
+     * Faça um programa que leia o código dos itens pedidos e as quantidades desejadas.
+     * Calcule e mostre o valor a ser pago por item (preço * quantidade) e o total geral
+     * do pedido. Considere que o cliente deve informar quando o pedido deve ser
+     * encerrado.
+    */
+    private static void questao42() {
+    	System.out.println("Especificação     Código Preço      Preço  ");
+    	System.out.println("Cachorro Quente        100         R$ 1,20 ");
+    	System.out.println("Bauru Simples          101         R$ 1,30 ");
+    	System.out.println("Bauru com ovo          102         R$ 1,50 ");
+    	System.out.println("Hambúrguer             103         R$ 1,20 ");
+    	System.out.println("Cheeseburguer          104         R$ 1,30 ");
+    	System.out.println("Refrigerante           105         R$ 1,00 ");
+    	
+    	System.out.println("Informe o codigo do produto: ");
+    	int cod = sc.nextInt();
+    	System.out.println("Informe a quantidade");
+    	int quant = sc.nextInt();
+    	if (cod == 100) {
+    		System.out.println("Valor a pagar: " + (quant * 1.20));
+    	}else if (cod == 101) {
+    		System.out.println("Valor a pagar: " + (quant * 1.30));
+    	}else if (cod == 102) {
+    		System.out.println("Valor a pagar: " + (quant * 1.30));
+    	}else if (cod == 103) {
+    		System.out.println("Valor a pagar: " + (quant * 1.20));
+    	}else if (cod == 104) {
+    		System.out.println("Valor a pagar: " + (quant * 1.30));
+    	}else if (cod == 105) {
+    		System.out.println("Valor a pagar: " + (quant * 1.00));
+    	}    	
+    }
+    
+    /*
+     * 43. Faça um programa que mostre os n termos da Série a seguir:
+     * S = 1/1 + 2/3 + 3/5 + 4/7 + 5/9 + ... + n/m
+     */
+    private static void questao43() {
+    	System.out.println("Informe o valor de N: ");
+    	int n = sc.nextInt();
+    	
+    	int m = 1;
+    	System.out.printf("s = ");
+    	for(int c = 1; c <= n; c++) {
+    		System.out.printf(" " + c + "/" + m);
+    		m += 2;
+    	}
+    	System.out.println("");
+    }
+    
+    /*
+     * 44. Sendo H= 1 + 1/2 + 1/3 + 1/4 + ... + 1/N, Faça um programa que calcule o valor de
+     * H com N termos.
+     */
+    private static void questao44() {
+    	System.out.println("Informe o N termo: ");
+    	int n = sc.nextInt();
+    	int soma = 0;
+    	System.out.printf("s = ");
+    	for(int c = 1; c < n; c++) {
+    		System.out.print(" 1/" + c);
+    		soma += 1 / c;
+    	}
+    	System.out.println(" ");
+    	System.out.println("A soma = " + soma);
+    }
+    
+    /*
+     * 45. Faça um programa que mostre os n termos da Série a seguir:
+     * S = 1/1 + 2/3 + 3/5 + 4/7 + 5/9 + ... + n/m
+     */
+    private static void questao45() {
+    	System.out.println("Informe o valor de N: ");
+    	int n = sc.nextInt();
+    	
+    	int m = 1;
+    	System.out.printf("s = ");
+    	for(int c = 1; c <= n; c++) {
+    		System.out.printf(" " + c + "/" + m);
+    		m += 2;
+    	}
+    	System.out.println("");
+    }
+    
+    /*
+     * 46. Sendo H= 1 + 1/2 + 1/3 + 1/4 + ... + 1/N, Faça um programa que calcule o valor de
+     * H com N termos.
+     */
+    private static void questao46() {
+    	System.out.println("Informe o valor de N: ");
+    	int n = sc.nextInt();
+    	int soma = 1;
+    	int m = 1;
+    	System.out.printf("s = 1 + ");
+    	for(int c = 2; c <= n; c++) {
+    		System.out.printf(" " + 1 + "/" + c);
+    		soma += 1 / c;
+    		m += 2;
+    	}
+    	System.out.println("\nSoma = " + soma);
+    }
+    
 }
